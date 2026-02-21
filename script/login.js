@@ -1,6 +1,6 @@
 // console.log('connected the login file')
 document.getElementById('login-btn').addEventListener('click',function(){
-    console.log('login button clicked')
+    // console.log('login button clicked')
     // get the mobile number input
     const numberInput = document.getElementById('input-number');
     const contactNumber = numberInput.value;
