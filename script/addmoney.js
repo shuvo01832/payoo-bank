@@ -1,3 +1,34 @@
 document.getElementById('add-money-btn').addEventListener('click',function(){
-    console.log('add to the add money account')
+    const bankAccount = getValueFromInput('add-money-bank');
+    if(bankAccount == 'select a bank'){
+        alert('plesse select a bank account');
+        return;
+    }
+   const accno =getValueFromInput('add-money-number');
+   if(accno.length !=11){
+    alert('Invaild acc no');
+   return;
+   }
+   const amount =getValueFromInput('add-money-amount');
+   const newBalance = getBalance() + Number(amount);
+   const pin =getValueFromInput('add-money-pin');
+   if(pin =='1234'){
+    alert(`Add money success from 
+        ${bankAccount}
+         at ${new Date()}`);
+    setBalance(newBalance);
+    const history= document.getElementById('history-container');
+    const newhistory=document.createElement('div');
+
+     newhistory.innerHTML=`
+      <div class="transaction-card p-5 bg-base-100">
+        Add money success from ${bankAccount} ,acc-no ${accno} at ${new data()}
+        </div>
+     `;
+     history.append(newhistory);
+
+   }else{
+    alert('Invaild pin');
+    return;
+   }
 })
