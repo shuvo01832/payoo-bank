@@ -1,33 +1,28 @@
 document.getElementById('Cashout-btn').addEventListener('click',function(){
-    //
-    // const cashoutNumber =getValueFromInput('cashout-number');
-    // if(cashoutNumber.length !=11){
-    //     alert('invalid number');
-    //     return;
-    // }
+    
+    const cashoutNumber =getValueFromInput('Cashout-number');
+if(cashoutNumber.lenght != 11){
+   alert('Invaild number');
+   return;
+}
+    const cashoutAmount =getValueFromInput('Cashout-amount');
 
-    const cashoutNumber = getValueFromInput('cashout-number');
-    if(cashoutNumber.length !=11){
-        alert('invalid number');
-        return;
-    }
-    const cashoutAmount =getValueFromInput('cashout-amount');
-   const currentBalance=getBalance(); 
- const newBalance=currentBalance-Number(cashoutAmount);
- console.log(newBalance);
- if(newBalance<0){
-    alert('Invaild Amount');
-    return;
- }
-
- const pin= getValueFromInput('cashout-btn');
- if(pin==='1234'){
-    alert('cashout success');
-    balanceElement.innerText=newBalance
- }else{
-    alert('Invaild pin');
-    return;
- }
+    const currentBalance=getBalance();
+//4 calculate balance
+const newBalance =currentBalance - Number(cashoutAmount);
+console.log(newBalance);
+if(newBalance<0){
+   alert('Invalid Amount');
+   return;
+}
+const pin = getValueFromInput('Cashout-pin');
+if(pin === '1234'){
+   alert('cashout success');
+ setBalance(newBalance);
+}else{
+   alert('Invaild pin')
+   return;
+}
 })
 
 // document.getElementById('Cashout-btn').addEventListener('click',function(){
