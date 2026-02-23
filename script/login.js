@@ -15,7 +15,7 @@ document.getElementById('login-btn').addEventListener('click',function(){
         //true::>>alert>homepage
         // replace ব্যবহার করলে index.html এ থাকবে কিন্তু assign ব্যবহার করলে home page  নিয়ে যাবে
         // window.location.replace('/home.html');
-        window.location.assign('/Home.html');
+        window.location.assign('/home.html');
     }
     else{
         alert('login failed');
