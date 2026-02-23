@@ -17,15 +17,15 @@ document.getElementById('add-money-btn').addEventListener('click',function(){
         ${bankAccount}
          at ${new Date()}`);
     setBalance(newBalance);
-    const history= document.getElementById('history-container');
-    const newhistory=document.createElement('div');
 
-     newhistory.innerHTML=`
-      <div class="transaction-card p-5 bg-base-100">
-        Add money success from ${bankAccount} ,acc-no ${accno} at ${new data()}
-        </div>
-     `;
-     history.append(newhistory);
+const history =document.getElementById('history-container');
+const newHistory =document.createElement('div');
+newHistory.innerHTML=`
+  <div class="transaction-card bg-base-100 p-8">
+    Add money success from ${bankAccount},acc-no ${accno} at ${new Date()}
+   </div>
+`
+    history.append(newHistory);
 
    }else{
     alert('Invaild pin');
